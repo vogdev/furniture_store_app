@@ -74,7 +74,11 @@ class Index extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => Show(color: 0XFFffcc13,image:'chair.png')));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              Show(color: 0XFFffcc13, image: 'chair.png',tagName:'card1')));
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 30, top: 40),
@@ -113,15 +117,18 @@ class Index extends StatelessWidget {
                           Text('45 Chairs'),
                         ],
                       ),
-                      Container(
-                        height: 200,
-                        width: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('./images/chair.png'),
+                      Hero(
+                        tag: 'card1',
+                        child: Container(
+                          height: 200,
+                          width: 100,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('./images/chair.png'),
+                              // ...
+                            ),
                             // ...
                           ),
-                          // ...
                         ),
                       )
                     ],
@@ -130,7 +137,11 @@ class Index extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => Show(color: 0XFF3ba7ab,image:'sofa.png')));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              Show(color: 0XFF3ba7ab, image: 'sofa.png',tagName:'card2')));
                 },
                 child: Container(
                   margin: EdgeInsets.only(left: 30, top: 40),
@@ -169,15 +180,18 @@ class Index extends StatelessWidget {
                           Text('92 sofas'),
                         ],
                       ),
-                      Container(
-                        height: 150,
-                        width: 280,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('./images/sofa.png'),
+                      Hero(
+                        tag: 'card2',
+                                              child: Container(
+                          height: 150,
+                          width: 280,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('./images/sofa.png'),
+                              // ...
+                            ),
                             // ...
                           ),
-                          // ...
                         ),
                       )
                     ],
@@ -186,7 +200,11 @@ class Index extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context) => Show(color: 0XFFe82f46,image:'stools.png')));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              Show(color: 0XFFe82f46, image: 'stools.png',tagName:'card3')));
                 },
                 child: Container(
                   margin: EdgeInsets.only(right: 30, top: 40),
@@ -225,14 +243,17 @@ class Index extends StatelessWidget {
                           Text('35 stools'),
                         ],
                       ),
-                      Container(
-                        width: 100,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage('./images/stools.png'),
+                     Hero(
+                        tag: 'card3',
+                                              child: Container(
+                          width: 100,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage('./images/stools.png'),
+                              // ...
+                            ),
                             // ...
                           ),
-                          // ...
                         ),
                       )
                     ],

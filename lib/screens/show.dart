@@ -4,7 +4,8 @@ import 'package:furniture_store_app/presentation/custom_icons_icons.dart';
 class Show extends StatelessWidget {
   final String image;
   final int color;
-  const Show({Key key, this.image, this.color}) : super(key: key);
+  final String tagName;
+  const Show({Key key, this.image, this.color,@required this.tagName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,15 +46,18 @@ class Show extends StatelessWidget {
           SizedBox(
             height: 20.0,
           ),
-          Container(
-            width: double.infinity,
-            height: 250.0,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('./images/$image'),
+          Hero(
+            tag: '$tagName',
+                      child: Container(
+              width: double.infinity,
+              height: 250.0,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('./images/$image'),
+                  // ...
+                ),
                 // ...
               ),
-              // ...
             ),
           ),
            SizedBox(
